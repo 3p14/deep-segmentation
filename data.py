@@ -5,7 +5,7 @@ import os
 import numpy as np
 from skimage.io import imread, imsave
 from skimage.transform import resize
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 data_path = '.'
 raw_data_path = os.path.join(data_path, 'raw')
