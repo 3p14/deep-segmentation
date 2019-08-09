@@ -96,10 +96,10 @@ def create_train_test_data():
 
 
 def load_train_data(bit):
-    images = np.load(os.path.join(npy_data_path, 'images_train.npy'))
-    images16 = np.load(os.path.join(npy_data_path, 'images16_train.npy'))
-    masks = np.load(os.path.join(npy_data_path, 'masks_train.npy'))
-    ids = np.load(os.path.join(npy_data_path, 'ids_train.npy'))
+    images = np.load(os.path.join(npy_data_path, 'images_train.npy'), allow_pickle=True)
+    images16 = np.load(os.path.join(npy_data_path, 'images16_train.npy'), allow_pickle=True)
+    masks = np.load(os.path.join(npy_data_path, 'masks_train.npy'), allow_pickle=True)
+    ids = np.load(os.path.join(npy_data_path, 'ids_train.npy'), allow_pickle=True)
     if bit == 8:
         return images, masks, ids
     else:
@@ -107,10 +107,10 @@ def load_train_data(bit):
 
 
 def load_test_data(bit):
-    images = np.load(os.path.join(npy_data_path, 'images_test.npy'))
-    images16 = np.load(os.path.join(npy_data_path, 'images16_test.npy'))
-    masks = np.load(os.path.join(npy_data_path, 'masks_test.npy'))
-    ids = np.load(os.path.join(npy_data_path, 'ids_test.npy'))
+    images = np.load(os.path.join(npy_data_path, 'images_test.npy'), allow_pickle=True)
+    images16 = np.load(os.path.join(npy_data_path, 'images16_test.npy'), allow_pickle=True)
+    masks = np.load(os.path.join(npy_data_path, 'masks_test.npy'), allow_pickle=True)
+    ids = np.load(os.path.join(npy_data_path, 'ids_test.npy'), allow_pickle=True)
     if bit == 8:
         return images, masks, ids
     else:
